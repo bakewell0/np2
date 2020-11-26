@@ -1,0 +1,29 @@
+{
+  "name": "np2",
+  "version": "1.0.2",
+  "description": "ddd",
+  "scripts": {
+    "test": "d",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "d"
+  },
+  "keywords": [
+    "dd"
+  ],
+  "author": "zheng",
+  "license": "ISC",
+  "files": [
+    "dist",
+    "es",
+    "lib"
+  ],
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "webpack": "^5.7.0",
+    "webpack-cli": "^4.2.0"
+  }
+}
