@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+// import './style/index.less';
+import './style/index.stylus';
 
 function App() {
   return (
-    <div >
-       hello ,world 
+    <div   className="box selected">
+       hello ,world  
+
     </div>
   );
 }

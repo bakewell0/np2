@@ -12,11 +12,45 @@ module.exports = {
     },
     module:{   // 第三方模块配置规则
         rules:[
-            {test:/\.js|jsx$/ , use:{
-                loader:'babel-loader',
-                options: {
-                    presets:['@babel/preset-env']}
-            }, exclude: /node_modules/}    // 添加排除项
+            {
+                test:/\.js|jsx$/ , 
+                use:{
+                    loader:'babel-loader',
+                    options: {
+                        presets:['@babel/preset-env']}
+                    }, 
+                exclude: /node_modules/
+            },
+            {
+                test: /\.less$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'less-loader'
+                ]
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
+                ]
+            },
+            {
+                test: /\.stylus$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'stylus-loader'
+                ]
+            },
+            {
+                test: /\.(js|jsx)$/,
+                loader: 'eslint-loader',
+                exclude: /node_modules/,
+                enforce: 'pre' // 预处理
+            }
         ]
     },
     plugins: [
