@@ -5,7 +5,7 @@ import './style/index.stylus';
 
 function App () {
   return (
-    <div className =                   "box selected" >
+    <div className = "box selected" >
        hello ,world
     </div>
   );
