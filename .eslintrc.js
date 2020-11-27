@@ -35,5 +35,8 @@ module.exports = {
       "no-multiple-empty-lines": [0, {"max": 100}],
       //关闭禁止混用tab和空格
       "no-mixed-spaces-and-tabs": [0],
+      "react/jsx-uses-react":2,
+      "react/jsx-uses-vars":2,
+      "react/react-in-jsx-scope":2
     }
   }  
