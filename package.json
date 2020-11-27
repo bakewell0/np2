@@ -45,10 +45,14 @@
     "webpack-cli": "3.3.2",
     "webpack-dev-server": "3.5.1"
   },
-  "lint-staged": {
-    "src/**/*.{js,less,scss,stylus}": [
-    "eslint --fix",
-    "git add"
-    ]
-  },
+  // "lint-staged": {
+  //   "src/**/*.{js,less,scss,stylus}": [
+  //   "eslint --fix",
+  //   "git add"
+  //   ]
+  // }
+
+  "lint-staged":{
+    "src/**/*.js":"eslint --fix"
+  }
 }
