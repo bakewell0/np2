@@ -8,7 +8,8 @@
     "dev": "webpack-dev-server",
     "lint": "eslint --ext .js --ext .jsx src",
     "lint-fix": "eslint --fix --ext .js --fix --ext .jsx src",
-    "lint:staged": "lint-staged"
+    "lint:staged": "lint-staged",
+    "lintcss": "stylelint src/**/*.stylus --fix"
   },
   "repository": {
     "type": "git",
@@ -41,6 +42,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.0",
     "husky": "^4.3.0",
     "less": "^3.12.2",
@@ -51,8 +53,11 @@
     "sass": "^1.29.0",
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
+    "stylelint": "^13.8.0",
+    "stylelint-plugin-stylus": "^0.9.0",
     "stylus": "^0.54.8",
     "stylus-loader": "^4.3.0",
+    "url-loader": "^4.1.1",
     "webpack": "4.32.2",
     "webpack-cli": "3.3.2",
     "webpack-dev-server": "3.5.1"
