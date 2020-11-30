@@ -1,8 +1,9 @@
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const path = require('path');
-
-console.log('process.argvprocess.argvprocess.argvprocess.argv', process.env.ENV_TYPE)
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -24,11 +25,7 @@ module.exports = {
       },
       {
         test: /\.less$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'less-loader'
-        ]
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader']
       },
       {
         test: /\.scss$/,
@@ -85,7 +82,14 @@ module.exports = {
       'process.env': {
         ENV_TYPE: JSON.stringify(process.env.ENV_TYPE)
       }
-    })
+    }),
+    new CleanWebpackPlugin(),
+    // // 抽离 css 文件
+    new MiniCssExtractPlugin({
+      filename: '[name]_[hash:8].css',
+      chunkFilename: '[id]_[hash:8].css'
+    }),
+    new OptimizeCssAssetsPlugin()
   ]
   // module: {
   //     loaders: [
