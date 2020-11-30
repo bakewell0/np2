@@ -14,4 +14,6 @@ function App () {
   );
 }
 
+console.log('Running App version' + process.env.ENV_TYPE);
+
 ReactDOM.render(<App/>, document.getElementById('app'))

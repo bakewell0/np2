@@ -5,7 +5,7 @@
   "scripts": {
     "test": "d",
     "build": "webpack --config webpack.config.js",
-    "dev": "webpack-dev-server",
+    "dev": "cross-env ENV_TYPE=test webpack-dev-server --config webpack.config.js",
     "lint": "eslint --ext .js --ext .jsx src",
     "lint-fix": "eslint --fix --ext .js --fix --ext .jsx src",
     "lint:staged": "lint-staged",
@@ -34,6 +34,7 @@
     "@commitlint/config-conventional": "^11.0.0",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
+    "cross-env": "^7.0.2",
     "css-loader": "^5.0.1",
     "eslint": "^7.14.0",
     "eslint-config-standard": "^16.0.2",

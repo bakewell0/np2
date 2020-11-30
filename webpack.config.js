@@ -2,6 +2,8 @@ const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
+console.log('process.argvprocess.argvprocess.argvprocess.argv', process.env.ENV_TYPE)
+
 module.exports = {
   entry: [
     './src/index.js'
@@ -78,6 +80,11 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: path.join(__dirname, './src/index.html'),
       filename: 'index.html' // 生成的内存中首页的名称
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        ENV_TYPE: JSON.stringify(process.env.ENV_TYPE)
+      }
     })
   ]
   // module: {
